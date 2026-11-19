@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: simple-wml-diff
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/simple-wml-diff/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_simple_wml_diff
+    libfuzzer: true
+    timeout: 10

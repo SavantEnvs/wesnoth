@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: simple-wml-compressed
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/simple-wml-compressed/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_simple_wml_compressed
+    libfuzzer: true
+    timeout: 10

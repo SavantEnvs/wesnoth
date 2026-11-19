@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: wml-parser
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wml-parser/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_wml_parser
+    libfuzzer: true
+    timeout: 10

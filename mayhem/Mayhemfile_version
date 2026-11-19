@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: version
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/version/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_version
+    libfuzzer: true
+    timeout: 10

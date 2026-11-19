@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: terrain-map
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/terrain-map/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_terrain_map
+    libfuzzer: true
+    timeout: 10

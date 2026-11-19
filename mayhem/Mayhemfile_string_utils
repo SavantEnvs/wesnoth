@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: string-utils
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/string-utils/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_string_utils
+    libfuzzer: true
+    timeout: 10

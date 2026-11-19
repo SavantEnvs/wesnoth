@@ -1,0 +1,9 @@
+project: savantenvs/wesnoth
+target: wml-preprocessor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wml-preprocessor/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/bin/fuzz_wml_preprocessor
+    libfuzzer: true
+    timeout: 10
